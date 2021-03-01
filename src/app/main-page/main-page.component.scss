@@ -33,5 +33,24 @@ h1{
         font-weight: 300;
         font-size: 58px;
         color: white;
+
+        &.green {
+            color: $green;
+        }
+         &.red {
+            color: $red;
+        }
+    }
+}
+
+.add-item-section{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .add-item-container{
+        width: 680px;
+        
     }
 }
