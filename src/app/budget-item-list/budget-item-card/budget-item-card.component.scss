@@ -47,6 +47,11 @@
     border-radius: 5px;
     cursor: pointer;
 
+    transition: background-color 0.2s ease-out;
+    &:hover{
+        background-color: darken($light-grey, 2%);
+    }
+
     .description{
         display: flex;
         flex-grow: 1;
@@ -60,6 +65,7 @@
         padding: 5px;
         border-radius: 3px;
     }
+
 }
 
 .expense{
