@@ -12,13 +12,20 @@ export class AddItemFormComponent implements OnInit {
   @Input() item: BudgetItem = new BudgetItem('', NaN);
   @Output() formSubmit: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
 
+  isNewItem?: boolean;
   constructor() { }
 
   ngOnInit(): void {
+    if (this.item) {
+      this.isNewItem = false;
+    } else {
+      this.isNewItem = true;
+    }
   }
 
   onSubmit(form: NgForm) {
     this.formSubmit.emit(form.value);
+    form.reset();
   }
 
 }
